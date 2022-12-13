@@ -21,6 +21,8 @@ c = 390.8
 print(int(b))
 print(int(c))
 print(str(421.134))
+a = 5 / 2
+print(a)
 f = 5555.55
 print(str(f))
 f = 5555.55
