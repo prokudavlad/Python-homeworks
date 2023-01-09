@@ -85,3 +85,19 @@
 # print(my_string)
 # print(my_string[::2])
 # print(my_string[::-1])
+
+# количество вхождений символа в списке строк
+ListStr=['text', 'file', 'notepad', 'windows', 'hello']
+c='t' # символ 't'
+List_=[] # количество вхождений
+i=0
+while i<5:
+    j=0
+    k=0
+    while j<len(ListStr[i]):
+        if c==ListStr[i][j]:
+            k=k+1
+        j=j+1
+    ListK=List_+[k]
+    i=i+1
+print(List_) # ListK = [2, 0, 1, 0, 0]
