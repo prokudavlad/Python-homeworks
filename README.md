@@ -132,3 +132,57 @@ ___
 
 The user enters a number. Determination of the presence of a given element in the list list_=[2,8,3,4,3,5,2,1,0,3,4,4,5,8,7,7,5]. If the element is not found, then an appropriate message is displayed.
 ___
+
+## Task #14 ![cсылка на канал](logo3.png)
+
+Fill the list with one hundred zeros, except for the first and last elements, which must be equal to ones.
+
+___
+
+## Task #15 ![cсылка на канал](logo3.png)
+
+Form an ascending list of even numbers (the number of elements is 45).
+
+___
+
+## Task #16 ![cсылка на канал](logo3.png)
+
+The user enters a number. Determine if the list contains the given number x. Display informational message contains or does not contain.
+
+___
+
+## Task #17 ![cсылка на канал](logo3.png)
+
+Find the sum and product of the elements of the list. Display the results on the screen.
+
+___
+
+## Task #18 ![cсылка на канал](logo3.png)
+
+Formation of a random array of 15 numbers that are in the range from 1 to 100.
+
+___
+
+## Task #19 ![cсылка на канал](logo3.png)
+
+Find the largest element in the list and display it on the screen.
+
+___
+
+## Task #20 ![cсылка на канал](logo3.png)
+
+Determine if there are duplicate elements in the list, if so, display this value on the screen.
+
+___
+
+## Task #21 ![cсылка на канал](logo3.png)
+
+Swap the largest and smallest elements of the list.
+
+___
+
+## Task #22 ![cсылка на канал](logo3.png)
+
+Given an arbitrary list. Imagine it in reverse order.
+
+___
