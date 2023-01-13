@@ -183,6 +183,6 @@ ___
 
 ## Task #22 ![cсылка на канал](logo3.png)
 
-Given an arbitrary list. Imagine it in reverse order.
+Given an arbitrary list. Imagine it in reverse order!
 
 ___
