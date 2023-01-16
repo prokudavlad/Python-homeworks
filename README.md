@@ -125,6 +125,8 @@ ___
 
 ## Task #12 ![cсылка на канал](logo3.png)
 
+[Python String Methods](https://www.w3schools.com/python/python_ref_string.asp)
+
 Given a list of strings. In each line, count the number of occurrences of the given character.
 ___
 
