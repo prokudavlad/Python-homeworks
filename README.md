@@ -188,3 +188,14 @@ ___
 Given an arbitrary list. Imagine it in reverse order!
 
 ___
+
+## Task #23 ![cсылка на канал](logo3.png)
+
+Create a dictionary with at least 5 elements. Swap the first and last element of the object. Delete the second element. Add the key 'new_key' to the end with the value 'new_value'. Print out the final dictionary. It is important that the dictionary remains the same (has the same address in memory).
+
+![Dictionaries](logo4.png)
+
+[Python Dictionaries](https://www.w3schools.com/python/python_dictionaries.asp)
+
+
+---
