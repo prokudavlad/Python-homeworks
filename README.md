@@ -3,9 +3,7 @@ ___
 1. Install a development environment or PyCharm or VSCode
 2. Explore PEP-8
 ___
-[Code guide Python]
-
-(https://pythonworld.ru/osnovy/pep-8-rukovodstvo-po-napisaniyu-koda-na-python.html)
+[Code guide Python](https://pythonworld.ru/osnovy/pep-8-rukovodstvo-po-napisaniyu-koda-na-python.html)
 
 ![cсылка на канал](logo.png)
 ___
