@@ -1,201 +1,101 @@
-# __Python-homeworks__
-___
-1. Install a development environment or PyCharm or VSCode
-2. Explore PEP-8
-___
-[Code guide Python]
+Цей скрипт призначений для обробки даних у форматі [JSON](https://uk.wikipedia.org/wiki/JSON) та перетворення їх на нову структуру відповідно до заданих правил. Він може бути корисним у різних сценаріях, де потрібно маніпулювати даними JSON та виконувати певні операції з ними.
 
-(https://pythonworld.ru/osnovy/pep-8-rukovodstvo-po-napisaniyu-koda-na-python.html)
+У контексті цього завдання скрипт працює наступним чином:
 
-![cсылка на канал](logo.png)
-___
-3. Print a List of Python Reserved Words.
+* Функція load_json(file_path) відповідає за завантаження вихідного файлу [JSON](https://uk.wikipedia.org/wiki/JSON#%D0%9F%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4_%D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%BD%D1%8F_JSON). Вона приймає шлях до файлу як параметр і повертає вміст файлу у форматі словника.
 
-    3.1. Run this print.
+* Функція convert_to_dict(json_data) перетворює вихідні дані з JSON-формату на словник. Вона приймає дані [JSON](https://uk.wikipedia.org/wiki/JSON#%D0%92%D0%B1%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9_JSON) у вигляді рядка та повертає відповідний словник.
 
-___
-__import keyword__
+* Функція generate_full_name(person_dict) формує повне ім'я персони на основі словника, що містить ім'я та прізвище. Вона отримує ім'я та прізвище зі словника і повертає об'єднане повне ім'я.
 
-__keyword.iskeyword('break')__
+* Функція process_data(json_data) виконує основну обробку даних. Вона проходить по кожному елементу список словників і створює новий словник. У новому словнику ключами є повні імена персон, а значеннями - відсортований список пар ключ-значення вихідного словника, відсортований за типом значення.
 
-__True__
+* Функція save_json(file_path, data) зберігає дані у форматі JSON у новий файл. Вона приймає шлях до файлу та даних у вигляді словника і зберігає їх у вказаний файл у форматі JSON.
 
-__print(keyword.kwlist)__
-___
-4. Print Zen Python. Run this print.
+* Функція process_json_files(input_file, output_file) поєднує всі попередні кроки. Вона завантажує вихідний файл JSON, обробляє дані, зберігає результати новий файл.
 
-___import this___
+Таким чином, скрипт бере вихідні дані з файлу hw.json, перетворює їх, виконує певні операції та записує результати у новий файл nw_result.json. Це дозволяє структурувати дані та перетворювати їх згідно з заданими правилами, представленими в задачі.
 
-___
-
-5. ___Create profile on Github___
-
-    5.1 Create repository (remote and clone locally)
-
-    5.2 Create a new branch, make any change in it and add it to git
-
-   5.3 Create a pull request
-
-![cсылка на канал](logo2.png)
+```
+[
+  {
+    "city": "Київ",
+    "region": "Київська область",
+    "population": 2967360
+  },
+  {
+    "city": "Харьків",
+    "region": "Харківська область",
+    "population": 1443207
+  },
+  {
+    "city": "Одеса",
+    "region": "Одеська область",
+    "population": 1017699
+  },
+  {
+```
 ___
 
-6. Create a Python module to implement integer keyboard input.
+```
+{
+    "Київ": [
+        [
+            "population",
+            2967360
+        ],
+        [
+            "city",
+            "Київ"
+        ],
+        [
+            "region",
+            "Київська область"
+        ]
+    ],
+    "Харьків": [
+        [
+            "population",
+            1443207
+        ],
+        [
+            "city",
+            "Харьків"
+        ],
+        [
+            "region",
+            "Харківська область"
+        ]
+    ],
+    "Одеса": [
+        [
+            "population",
+            1017699
+        ],
+        [
+            "city",
+            "Одеса"
+        ],
+        [
+            "region",
+            "Одеська область"
+        ]
+    ],
+```
+
+Ось кілька прикладів, де такий скрипт може бути корисним:
+
+* Обробка даних API: Якщо ви працюєте з API, яке повертає дані у форматі JSON, цей скрипт може допомогти вам структурувати та перетворити отримані дані за вашими потребами.
+
+* Перетворення даних для інших систем: Якщо вам потрібно перетворити дані у форматі JSON, щоб вони відповідали вимогам іншої системи або програми, ви можете використовувати цей скрипт для виконання необхідних перетворень та створення нового файлу з необхідним форматом даних.
+
+* Фільтрування та сортування даних: Скрипт може бути корисним для фільтрації та сортування даних у форматі JSON за різними критеріями. Ви можете визначити правила фільтрації та сортування у коді скрипту та застосувати їх до вхідних даних.
+
+* Автоматизація обробки даних: Якщо у вас є рутинні завдання з обробки даних у форматі JSON, цей скрипт може допомогти вам автоматизувати процес та заощадити час та зусилля.
+
+В цілому цей скрипт надає гнучку основу для обробки даних JSON і може бути адаптований та розширений для різних сценаріїв використання в залежності від ваших конкретних потреб.
 
-    6.1 Add functionality to convert to float and str. Print the result.
-___
-7. Create a Python module to implement keyboard entry of fractional (with floating comma) values.
 
-   7.1 Add functionality to convert to int and str.
 
-   7.2 Print the result.
 
-___
-## Task #1 ![cсылка на канал](logo3.png)
 
-From two random numbers, one of which is even, and the other is odd, determine and display an odd number.
-___
-
-## Task #2 ![cсылка на канал](logo3.png)
-
-
-Three different numbers are entered. Find which one is the average (greater than one, but less than the other).
-
-___
-
-## Task #3 ![cсылка на канал](logo3.png)
-
-The coordinates (x;y) of the point and the radius of the circle (r) are entered. Determine whether a given point belongs to a circle if its center is at the origin.
-___
-
-## Task #4 ![cсылка на канал](logo3.png)
-
-Given the following function y=f(x):
-
-___y=2x-10, if x>0___
-
-___y = 0, if x = 0___
-
-___y = 2 * |x| - 1, if x < 0___
-
-It is required to find the value of the function given x.
-___
-
-## Task #5 ![cсылка на канал](logo3.png)
-
-Three integers are entered. Determine which one is the largest.
-___
-
-## Task #6 ![cсылка на канал](logo3.png)
-
-Based on the lengths of three segments entered by the user, determine the possibility of the existence of a triangle composed of these segments. If such a triangle exists, then determine whether it is different-sided, isosceles or equilateral.
-___
-
-## Task #7 ![cсылка на канал](logo3.png)
-
-Determine the quarter of the coordinate plane to which the point belongs. Enter point coordinates from the keyboard.
-
-___
-
-## Task #8 ![cсылка на канал](logo3.png)
-
-Two integers are entered. Check if the first is divisible by the second. Display a message about it, as well as the remainder (if any) and the quotient (in any case).
-
-___
-
-## Task #9 ![cсылка на канал](logo3.png)
-
-Find the roots of a quadratic equation and display them on the screen, if any. If there are no roots, then display a message about it. A specific quadratic equation is determined by the coefficients a, b, c that the user enters.
-
-___
-
-## Task #10 ![cсылка на канал](logo3.png)
-
-[links for w3schools.com](https://www.w3schools.com/python/python_strings_methods.asp)
-
-According to the given snare, consider and test all string methods. For each method, the code should contain your own examples. Homework Outcome: Python files with modified methods.
-___
-
-## Task #11 ![cсылка на канал](logo3.png)
-
-[Python While Loops](https://www.w3schools.com/python/python_while_loops.asp)
-
-Some list A containing integers is given. Develop a program that calculates the sum of the elements of a list.
-
-___
-
-## Task #12 ![cсылка на канал](logo3.png)
-
-[Python String Methods](https://www.w3schools.com/python/python_ref_string.asp)
-
-Given a list of strings. In each line, count the number of occurrences of the given character.
-___
-
-## Task #13 ![cсылка на канал](logo3.png)
-
-The user enters a number. Determination of the presence of a given element in the list list_=[2,8,3,4,3,5,2,1,0,3,4,4,5,8,7,7,5]. If the element is not found, then an appropriate message is displayed.
-___
-
-## Task #14 ![cсылка на канал](logo3.png)
-
-Fill the list with one hundred zeros, except for the first and last elements, which must be equal to ones.
-
-___
-
-## Task #15 ![cсылка на канал](logo3.png)
-
-Form an ascending list of even numbers (the number of elements is 45).
-
-___
-
-## Task #16 ![cсылка на канал](logo3.png)
-
-The user enters a number. Determine if the list contains the given number x. Display informational message contains or does not contain.
-
-___
-
-## Task #17 ![cсылка на канал](logo3.png)
-
-Find the sum and product of the elements of the list. Display the results on the screen.
-
-___
-
-## Task #18 ![cсылка на канал](logo3.png)
-
-Formation of a random array of 15 numbers that are in the range from 1 to 100.
-
-___
-
-## Task #19 ![cсылка на канал](logo3.png)
-
-Find the largest element in the list and display it on the screen.
-
-___
-
-## Task #20 ![cсылка на канал](logo3.png)
-
-Determine if there are duplicate elements in the list, if so, display this value on the screen.
-
-___
-
-## Task #21 ![cсылка на канал](logo3.png)
-
-Swap the largest and smallest elements of the list.
-
-___
-
-## Task #22 ![cсылка на канал](logo3.png)
-
-Given an arbitrary list. Imagine it in reverse order!
-
-___
-
-## Task #23 ![cсылка на канал](logo3.png)
-
-Create a dictionary with at least 5 elements. Swap the first and last element of the object. Delete the second element. Add the key 'new_key' to the end with the value 'new_value'. Print out the final dictionary. It is important that the dictionary remains the same (has the same address in memory).
-
-![Dictionaries](logo4.png)
-
-[Python Dictionaries](https://www.w3schools.com/python/python_dictionaries.asp)
-
-
----
